@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newson Sportec | Metric to Imperial Length Converter</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 24px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      background: #090909;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #9be000;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #9be000;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 60px 6%;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(155, 224, 0, 0.18), transparent 35%),
+        #050505;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #9be000;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #d8d8d8;
+      margin-bottom: 24px;
+      max-width: 680px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 0 35px rgba(155, 224, 0, 0.35);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .badge {
+      border: 1px solid rgba(155, 224, 0, 0.5);
+      border-radius: 12px;
+      padding: 12px 18px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .badge span {
+      color: #9be000;
+    }
+
+    .converter-section {
+      padding: 40px 6% 70px;
+    }
+
+    .converter-card {
+      max-width: 980px;
+      margin: auto;
+      padding: 32px;
+      background: linear-gradient(145deg, #111111, #050505);
+      border: 1px solid rgba(155, 224, 0, 0.45);
+      border-radius: 24px;
+      box-shadow: 0 0 28px rgba(155, 224, 0, 0.12);
+    }
+
+    .converter-card h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+      color: #9be000;
+    }
+
+    .converter-card p {
+      color: #d4d4d4;
+      margin-bottom: 28px;
+    }
+
+    .converter-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 16px;
+      font-size: 20px;
+      border-radius: 12px;
+      border: 1px solid #444;
+      background: #181818;
+      color: #ffffff;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #9be000;
+      box-shadow: 0 0 8px rgba(155, 224, 0, 0.45);
+    }
+
+    .equals {
+      font-size: 36px;
+      font-weight: bold;
+      color: #9be000;
+    }
+
+    .field-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    .formula-box {
+      margin-top: 28px;
+      padding: 18px;
+      background: rgba(155, 224, 0, 0.08);
+      border-left: 5px solid #9be000;
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    .formula-box strong {
+      color: #9be000;
+    }
+
+    .table-section {
+      padding: 20px 6% 70px;
+    }
+
+    .table-card {
+      max-width: 980px;
+      margin: auto;
+      background: #101010;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    th {
+      background: #9be000;
+      color: #000000;
+      font-size: 18px;
+    }
+
+    td {
+      color: #eeeeee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: #aaaaaa;
+      background: #050505;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    @media (max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .converter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .equals {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">NEWSON <span>SPORTEC</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#converter">Converter</a>
+      <a href="#chart">Chart</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <h1>
+          Metric to <span>Imperial</span><br />
+          Length Converter
+        </h1>
+
+        <p>
+          Convert centimeters, meters, and kilometers to inches, feet, yards, and miles.
+          Fast, accurate, and easy to use.
+        </p>
+
+        <div class="badges">
+          <div class="badge"><span>✓</span> Fast Results</div>
+          <div class="badge"><span>✓</span> Accurate Conversion</div>
+          <div class="badge"><span>✓</span> Easy Calculator</div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/hero-newson-sportec.png" alt="Newson Sportec metric to imperial converter design" />
+      </div>
+    </section>
+
+    <section class="converter-section" id="converter">
+      <div class="converter-card">
+        <h2>Length Converter</h2>
+        <p>Enter a number and choose the units you want to convert.</p>
+
+        <div class="converter-grid">
+          <div class="field-group">
+            <input type="number" id="fromValue" value="1" step="any" />
+            <select id="fromUnit">
+              <option value="mm">Millimeter (mm)</option>
+              <option value="cm" selected>Centimeter (cm)</option>
+              <option value="m">Meter (m)</option>
+              <option value="km">Kilometer (km)</option>
+              <option value="in">Inch (in)</option>
+              <option value="ft">Foot (ft)</option>
+              <option value="yd">Yard (yd)</option>
+              <option value="mi">Mile (mi)</option>
+            </select>
+          </div>
+
+          <div class="equals">=</div>
+
+          <div class="field-group">
+            <input type="number" id="toValue" readonly />
+            <select id="toUnit">
+              <option value="mm">Millimeter (mm)</option>
+              <option value="cm">Centimeter (cm)</option>
+              <option value="m">Meter (m)</option>
+              <option value="km">Kilometer (km)</option>
+              <option value="in" selected>Inch (in)</option>
+              <option value="ft">Foot (ft)</option>
+              <option value="yd">Yard (yd)</option>
+              <option value="mi">Mile (mi)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="formula-box" id="formulaBox">
+          <strong>Formula:</strong> 1 centimeter = 0.393701 inch
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section" id="chart">
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric Unit</th>
+              <th>Imperial Conversion</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1 millimeter</td>
+              <td>0.0393701 inch</td>
+            </tr>
+            <tr>
+              <td>1 centimeter</td>
+              <td>0.393701 inch</td>
+            </tr>
+            <tr>
+              <td>1 meter</td>
+              <td>3.28084 feet</td>
+            </tr>
+            <tr>
+              <td>1 kilometer</td>
+              <td>0.621371 mile</td>
+            </tr>
+            <tr>
+              <td>1 inch</td>
+              <td>2.54 centimeters</td>
+            </tr>
+            <tr>
+              <td>1 foot</td>
+              <td>0.3048 meter</td>
+            </tr>
+            <tr>
+              <td>1 yard</td>
+              <td>0.9144 meter</td>
+            </tr>
+            <tr>
+              <td>1 mile</td>
+              <td>1.60934 kilometers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="converter-section" id="about">
+      <div class="converter-card">
+        <h2>About This Tool</h2>
+        <p>
+          This website helps users quickly convert metric and imperial length units.
+          It is useful for bicycle parts, spoke measurements, wheel sizes, workshop measurements,
+          product descriptions, and daily calculations.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Newson Sportec. Metric to Imperial Length Converter.
+  </footer>
+
+  <script>
+    const fromValue = document.getElementById("fromValue");
+    const fromUnit = document.getElementById("fromUnit");
+    const toValue = document.getElementById("toValue");
+    const toUnit = document.getElementById("toUnit");
+    const formulaBox = document.getElementById("formulaBox");
+
+    const unitsToMeters = {
+      mm: 0.001,
+      cm: 0.01,
+      m: 1,
+      km: 1000,
+      in: 0.0254,
+      ft: 0.3048,
+      yd: 0.9144,
+      mi: 1609.344
+    };
+
+    const unitNames = {
+      mm: "millimeter",
+      cm: "centimeter",
+      m: "meter",
+      km: "kilometer",
+      in: "inch",
+      ft: "foot",
+      yd: "yard",
+      mi: "mile"
+    };
+
+    function convertLength() {
+      const input = parseFloat(fromValue.value);
+
+      if (isNaN(input)) {
+        toValue.value = "";
+        formulaBox.innerHTML = "<strong>Formula:</strong> Please enter a number.";
+        return;
+      }
+
+      const meters = input * unitsToMeters[fromUnit.value];
+      const result = meters / unitsToMeters[toUnit.value];
+
+      toValue.value = Number(result.toFixed(6));
+
+      const oneUnitResult = unitsToMeters[fromUnit.value] / unitsToMeters[toUnit.value];
+
+      formulaBox.innerHTML =
+        `<strong>Formula:</strong> 1 ${unitNames[fromUnit.value]} = ${Number(oneUnitResult.toFixed(6))} ${unitNames[toUnit.value]}`;
+    }
+
+    fromValue.addEventListener("input", convertLength);
+    fromUnit.addEventListener("change", convertLength);
+    toUnit.addEventListener("change", convertLength);
+
+    convertLength();
+  </script>
+</body>
+</html>
