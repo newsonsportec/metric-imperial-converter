@@ -27,40 +27,31 @@
 
     header {
       width: 100%;
-      min-height: 220px;
+      min-height: 190px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 720px 1fr 620px;
+      grid-template-columns: 520px 1fr 620px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background: #020202;
     }
 
-    /* BIGGER LOGO + HIDE LEFT WHITE LINE */
     .site-logo {
       display: flex;
       align-items: center;
       justify-content: flex-start;
       overflow: hidden;
-    }
-
-    .logo-crop {
-      width: 660px;
-      height: 165px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+      width: 500px;
+      max-width: 100%;
     }
 
     .site-logo img {
-      width: 700px;
-      max-width: none;
-      height: auto;
+      width: 480px; /* x1.5 bigger */
+      max-height: 150px;
       object-fit: contain;
       display: block;
-      transform: translateX(-28px);
+      margin-left: -34px; /* hides the white line on the far left */
     }
 
     nav {
@@ -87,7 +78,6 @@
       text-underline-offset: 7px;
     }
 
-    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
       align-items: center;
@@ -391,19 +381,18 @@
       font-size: 14px;
     }
 
-    @media (max-width: 1800px) {
+    @media (max-width: 1700px) {
       header {
-        grid-template-columns: 620px 1fr 500px;
+        grid-template-columns: 440px 1fr 500px;
       }
 
-      .logo-crop {
-        width: 560px;
-        height: 150px;
+      .site-logo {
+        width: 420px;
       }
 
       .site-logo img {
-        width: 610px;
-        transform: translateX(-24px);
+        width: 420px;
+        margin-left: -30px;
       }
 
       nav {
@@ -447,17 +436,13 @@
       }
 
       .site-logo {
+        width: 420px;
         justify-content: center;
       }
 
-      .logo-crop {
-        width: 520px;
-        height: 140px;
-      }
-
       .site-logo img {
-        width: 560px;
-        transform: translateX(-22px);
+        width: 420px;
+        margin-left: -28px;
       }
 
       nav {
@@ -499,14 +484,13 @@
         padding: 18px 20px;
       }
 
-      .logo-crop {
-        width: 320px;
-        height: 100px;
+      .site-logo {
+        width: 300px;
       }
 
       .site-logo img {
-        width: 360px;
-        transform: translateX(-18px);
+        width: 300px;
+        margin-left: -22px;
       }
 
       nav {
@@ -568,9 +552,7 @@
 
     <header>
       <div class="site-logo">
-        <div class="logo-crop">
-          <img src="logo.png" alt="Newson Sportec Logo" />
-        </div>
+        <img src="logo.png" alt="Newson Sportec Logo" />
       </div>
 
       <nav>
@@ -611,6 +593,7 @@
     </header>
 
     <main class="hero">
+
       <section class="left-panel">
         <div class="hero-title-wrap">
           <img src="hero-title.png" alt="Metric To Imperial Length Converter" class="hero-title-image" />
@@ -721,11 +704,13 @@
           <img class="performance-card-image" src="performance-card02.png" alt="Newson Sportec performance banner" />
         </div>
       </section>
+
     </main>
 
     <footer>
       © 2026 Newson Sportec. All rights reserved.
     </footer>
+
   </div>
 
   <script>
