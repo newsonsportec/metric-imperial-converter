@@ -298,6 +298,65 @@
       color: #ffe24a;
     }
 
+    /* SPOKE CALCULATOR BUTTON UNDER LENGTH CONVERTER */
+    .spoke-button-row {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .spoke-calculator-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 245px;
+      height: 74px;
+      padding: 0 34px;
+
+      border-radius: 18px;
+      border: 2px solid rgba(255, 136, 0, 0.95);
+
+      background:
+        linear-gradient(180deg, #ff9f16 0%, #ff8500 48%, #f06f00 100%);
+
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 29px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
+
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
+        0 7px 0 #b34b00,
+        0 14px 24px rgba(0, 0, 0, 0.55);
+
+      transition: 0.2s ease;
+    }
+
+    .spoke-calculator-btn:hover {
+      transform: translateY(-2px);
+      background:
+        linear-gradient(180deg, #ffb02a 0%, #ff8c00 48%, #f06f00 100%);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.26),
+        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
+        0 9px 0 #b34b00,
+        0 18px 28px rgba(0, 0, 0, 0.62);
+    }
+
+    .spoke-calculator-btn:active {
+      transform: translateY(5px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 0 rgba(120, 50, 0, 0.18),
+        0 2px 0 #b34b00,
+        0 8px 18px rgba(0, 0, 0, 0.5);
+    }
+
     .common-card {
       background: rgba(14, 14, 14, 0.98);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -376,63 +435,6 @@
       object-fit: contain;
     }
 
-    /* SPOKE CALCULATOR BUTTON - MOVED UP ABOUT 0.8MM */
-    .spoke-calculator-btn {
-      position: absolute;
-      left: 34px;
-      bottom: 27px;
-
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      min-width: 245px;
-      height: 74px;
-      padding: 0 34px;
-
-      border-radius: 18px;
-      border: 2px solid rgba(255, 136, 0, 0.95);
-
-      background:
-        linear-gradient(180deg, #ff9f16 0%, #ff8500 48%, #f06f00 100%);
-
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 29px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-
-      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
-
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.22),
-        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
-        0 7px 0 #b34b00,
-        0 14px 24px rgba(0, 0, 0, 0.55);
-
-      transition: 0.2s ease;
-    }
-
-    .spoke-calculator-btn:hover {
-      transform: translateY(-2px);
-      background:
-        linear-gradient(180deg, #ffb02a 0%, #ff8c00 48%, #f06f00 100%);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.26),
-        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
-        0 9px 0 #b34b00,
-        0 18px 28px rgba(0, 0, 0, 0.62);
-    }
-
-    .spoke-calculator-btn:active {
-      transform: translateY(5px);
-      box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.18),
-        inset 0 -2px 0 rgba(120, 50, 0, 0.18),
-        0 2px 0 #b34b00,
-        0 8px 18px rgba(0, 0, 0, 0.5);
-    }
-
     footer {
       text-align: center;
       color: #999999;
@@ -492,8 +494,6 @@
         height: 66px;
         font-size: 24px;
         border-radius: 16px;
-        left: 30px;
-        bottom: 25px;
       }
     }
 
@@ -546,11 +546,6 @@
 
       .common-grid {
         grid-template-columns: repeat(3, 1fr);
-      }
-
-      .spoke-calculator-btn {
-        left: 26px;
-        bottom: 23px;
       }
     }
 
@@ -621,8 +616,6 @@
       }
 
       .spoke-calculator-btn {
-        left: 18px;
-        bottom: 19px;
         min-width: 170px;
         height: 50px;
         font-size: 18px;
@@ -749,6 +742,12 @@
           </div>
         </section>
 
+        <div class="spoke-button-row">
+          <a class="spoke-calculator-btn" href="https://newsonsportec.github.io/spoke-calculator/" target="_blank">
+            Spoke Calculator
+          </a>
+        </div>
+
         <section class="common-card">
           <h2 class="common-title">↔ Common Conversions</h2>
 
@@ -793,9 +792,6 @@
 
         <div class="performance-card-wrap">
           <img class="performance-card-image" src="performance-card02.png" alt="Newson Sportec performance banner" />
-          <a class="spoke-calculator-btn" href="https://newsonsportec.github.io/spoke-calculator/" target="_blank">
-            Spoke Calculator
-          </a>
         </div>
       </section>
 
