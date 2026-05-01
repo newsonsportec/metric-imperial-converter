@@ -27,10 +27,10 @@
 
     header {
       width: 100%;
-      min-height: 150px;
+      min-height: 165px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 420px 1fr 320px;
+      grid-template-columns: 420px 1fr 430px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -80,12 +80,12 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .social-title {
-      font-size: 16px;
-      font-weight: 800;
+      font-size: 20px;
+      font-weight: 900;
       color: #9cff00;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -93,35 +93,35 @@
 
     .social-icons {
       display: flex;
-      gap: 12px;
+      gap: 16px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     .social-icon {
-      width: 46px;
-      height: 46px;
+      width: 82px;
+      height: 82px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: #0d0d0d;
-      border: 1px solid rgba(156, 255, 0, 0.35);
+      border: 2px solid rgba(156, 255, 0, 0.55);
       text-decoration: none;
       transition: 0.25s ease;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 18px rgba(156, 255, 0, 0.15);
     }
 
     .social-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 42px;
+      height: 42px;
       fill: #ffffff;
       transition: 0.25s ease;
     }
 
     .social-icon:hover {
       border-color: #9cff00;
-      transform: translateY(-2px);
-      box-shadow: 0 0 14px rgba(156, 255, 0, 0.22);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 22px rgba(156, 255, 0, 0.35);
       background: #111111;
     }
 
@@ -387,21 +387,31 @@
       font-size: 14px;
     }
 
-    @media (max-width: 1500px) {
+    @media (max-width: 1600px) {
       header {
-        grid-template-columns: 320px 1fr 280px;
+        grid-template-columns: 320px 1fr 360px;
       }
 
       .site-logo img {
         width: 280px;
       }
 
+      nav {
+        gap: 24px;
+      }
+
       nav a {
         font-size: 20px;
       }
 
-      nav {
-        gap: 24px;
+      .social-icon {
+        width: 70px;
+        height: 70px;
+      }
+
+      .social-icon svg {
+        width: 36px;
+        height: 36px;
       }
     }
 
@@ -463,12 +473,17 @@
       }
 
       .social-title {
-        font-size: 15px;
+        font-size: 16px;
       }
 
       .social-icon {
-        width: 42px;
-        height: 42px;
+        width: 58px;
+        height: 58px;
+      }
+
+      .social-icon svg {
+        width: 30px;
+        height: 30px;
       }
 
       .hero {
@@ -521,29 +536,25 @@
         <div class="social-title">Social Media</div>
 
         <div class="social-icons">
-          <!-- Facebook -->
-          <a class="social-icon" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+          <a class="social-icon" href="https://www.facebook.com/Newsonsportecnews/?fref=ts" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-.9-.1-1.8-.1-2.9 0-4.7 1.8-4.7 5V11H7v3h2.5v7h4z"/>
             </svg>
           </a>
 
-          <!-- YouTube -->
-          <a class="social-icon" href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+          <a class="social-icon" href="https://www.youtube.com/results?search_query=Newson+Sportec" target="_blank" aria-label="YouTube">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21.8 8.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 5 12 5 12 5h0s-3.9 0-6.9.2c-.4.1-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2 9.9 2 11.6v.8c0 1.7.2 3.4.2 3.4s.2 1.5.8 2.1c.8.8 1.9.8 2.4.9 1.7.2 6.6.2 6.6.2s3.9 0 6.9-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.4v-.8c0-1.7-.2-3.4-.2-3.4zM9.8 15.1V8.8l6 3.2-6 3.1z"/>
+              <path d="M21.8 8.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.9 5 12 5 12 5s-3.9 0-6.9.2c-.4.1-1.3.1-2.1.9-.6.6-.8 2.1-.8 2.1S2 9.9 2 11.6v.8c0 1.7.2 3.4.2 3.4s.2 1.5.8 2.1c.8.8 1.9.8 2.4.9 1.7.2 6.6.2 6.6.2s3.9 0 6.9-.2c.4-.1 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.4v-.8c0-1.7-.2-3.4-.2-3.4zM9.8 15.1V8.8l6 3.2-6 3.1z"/>
             </svg>
           </a>
 
-          <!-- Instagram -->
-          <a class="social-icon" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <a class="social-icon" href="https://www.instagram.com/newsonsportec/" target="_blank" aria-label="Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
             </svg>
           </a>
 
-          <!-- LinkedIn -->
-          <a class="social-icon" href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+          <a class="social-icon" href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3A2.06 2.06 0 1 0 5.3 7.1 2.06 2.06 0 0 0 5.25 3zM20.44 13.03c0-3.32-1.77-4.86-4.13-4.86-1.9 0-2.75 1.04-3.22 1.78V8.5H9.72c.05.96 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.13-.92.27-.68.87-1.38 1.88-1.38 1.33 0 1.87 1.01 1.87 2.49V20H20.44z"/>
             </svg>
