@@ -37,7 +37,6 @@
       background: #020202;
     }
 
-    /* BIGGER LOGO + HIDE LEFT WHITE LINE */
     .site-logo {
       display: flex;
       align-items: center;
@@ -47,11 +46,11 @@
     }
 
     .site-logo img {
-      width: 576px; /* about x1.8 */
+      width: 576px;
       max-height: 165px;
       object-fit: contain;
       display: block;
-      margin-left: -18px; /* crop the white line on the left side */
+      margin-left: -18px;
       border: none;
       box-shadow: none;
     }
@@ -80,7 +79,6 @@
       text-underline-offset: 7px;
     }
 
-    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
       align-items: center;
@@ -339,7 +337,6 @@
       font-size: 13px;
     }
 
-    /* MASCOT IMAGE */
     .mascot-image-area {
       flex: 1;
       width: 100%;
@@ -365,7 +362,6 @@
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
-    /* BOTTOM RIGHT CARD */
     .performance-card-wrap {
       width: 100%;
       margin-top: 8px;
@@ -380,30 +376,61 @@
       object-fit: contain;
     }
 
-    /* SPOKE CALCULATOR BUTTON */
+    /* SPOKE CALCULATOR BUTTON - MATCHES ORANGE IMAGE BUTTON */
     .spoke-calculator-btn {
       position: absolute;
       left: 34px;
       bottom: 24px;
+
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 180px;
-      height: 54px;
-      padding: 0 22px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #ffb14a 0%, #f28a1a 100%);
+
+      min-width: 245px;
+      height: 74px;
+      padding: 0 34px;
+
+      border-radius: 18px;
+      border: 2px solid rgba(255, 136, 0, 0.95);
+
+      background:
+        linear-gradient(180deg, #ff9f16 0%, #ff8500 48%, #f06f00 100%);
+
       color: #ffffff;
       text-decoration: none;
-      font-size: 24px;
+      font-size: 29px;
       font-weight: 800;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-      transition: 0.25s ease;
+      letter-spacing: 0.2px;
+
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
+
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.22),
+        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
+        0 7px 0 #b34b00,
+        0 14px 24px rgba(0, 0, 0, 0.55);
+
+      transition: 0.2s ease;
     }
 
     .spoke-calculator-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.42);
+      background:
+        linear-gradient(180deg, #ffb02a 0%, #ff8c00 48%, #f06f00 100%);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.26),
+        inset 0 -3px 0 rgba(120, 50, 0, 0.22),
+        0 9px 0 #b34b00,
+        0 18px 28px rgba(0, 0, 0, 0.62);
+    }
+
+    .spoke-calculator-btn:active {
+      transform: translateY(5px);
+      box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 0 rgba(120, 50, 0, 0.18),
+        0 2px 0 #b34b00,
+        0 8px 18px rgba(0, 0, 0, 0.5);
     }
 
     footer {
@@ -461,9 +488,12 @@
       }
 
       .spoke-calculator-btn {
-        font-size: 20px;
-        min-width: 160px;
-        height: 50px;
+        min-width: 220px;
+        height: 66px;
+        font-size: 24px;
+        border-radius: 16px;
+        left: 30px;
+        bottom: 22px;
       }
     }
 
@@ -593,10 +623,16 @@
       .spoke-calculator-btn {
         left: 18px;
         bottom: 16px;
-        min-width: 145px;
-        height: 44px;
-        font-size: 17px;
-        padding: 0 16px;
+        min-width: 170px;
+        height: 50px;
+        font-size: 18px;
+        padding: 0 18px;
+        border-radius: 12px;
+        box-shadow:
+          inset 0 2px 0 rgba(255, 255, 255, 0.2),
+          inset 0 -2px 0 rgba(120, 50, 0, 0.2),
+          0 5px 0 #b34b00,
+          0 10px 18px rgba(0, 0, 0, 0.5);
       }
     }
   </style>
