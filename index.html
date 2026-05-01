@@ -38,16 +38,23 @@
     }
 
     .site-logo {
+      width: 320px;
+      height: 120px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: flex-start;
     }
 
     .site-logo img {
-      width: 320px;
+      width: 340px;
       max-height: 120px;
       object-fit: contain;
       display: block;
+
+      /* This removes the white line on the left side of the logo image */
+      clip-path: inset(0 0 0 32px);
+      transform: translateX(-32px);
     }
 
     nav {
@@ -74,7 +81,6 @@
       text-underline-offset: 7px;
     }
 
-    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
       align-items: center;
@@ -333,7 +339,6 @@
       font-size: 13px;
     }
 
-    /* MASCOT IMAGE X1.5 */
     .mascot-image-area {
       flex: 1;
       width: 100%;
@@ -384,8 +389,12 @@
         grid-template-columns: 320px 1fr 500px;
       }
 
-      .site-logo img {
+      .site-logo {
         width: 280px;
+      }
+
+      .site-logo img {
+        width: 300px;
       }
 
       nav {
@@ -428,8 +437,12 @@
         min-height: auto;
       }
 
-      .site-logo img {
+      .site-logo {
         width: 320px;
+      }
+
+      .site-logo img {
+        width: 340px;
       }
 
       nav {
@@ -471,8 +484,12 @@
         padding: 18px 20px;
       }
 
-      .site-logo img {
+      .site-logo {
         width: 260px;
+      }
+
+      .site-logo img {
+        width: 280px;
       }
 
       nav {
