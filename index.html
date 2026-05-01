@@ -30,27 +30,30 @@
       min-height: 190px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 620px 1fr 460px;
+      grid-template-columns: 620px 1fr 520px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background: #020202;
     }
 
+    /* BIGGER LOGO + HIDE LEFT WHITE LINE */
     .site-logo {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      width: 590px;
+      width: 600px;
       overflow: hidden;
     }
 
     .site-logo img {
-      width: 576px; /* x1.8 larger */
-      max-height: 150px;
+      width: 576px; /* about x1.8 */
+      max-height: 165px;
       object-fit: contain;
       display: block;
-      margin-left: -34px; /* removes the white line area on the left */
+      margin-left: -18px; /* crop the white line on the left side */
+      border: none;
+      box-shadow: none;
     }
 
     nav {
@@ -77,6 +80,7 @@
       text-underline-offset: 7px;
     }
 
+    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
       align-items: center;
@@ -335,6 +339,7 @@
       font-size: 13px;
     }
 
+    /* MASCOT IMAGE */
     .mascot-image-area {
       flex: 1;
       width: 100%;
@@ -360,9 +365,11 @@
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
+    /* BOTTOM RIGHT CARD */
     .performance-card-wrap {
       width: 100%;
       margin-top: 8px;
+      position: relative;
     }
 
     .performance-card-image {
@@ -371,6 +378,32 @@
       height: auto;
       border-radius: 16px;
       object-fit: contain;
+    }
+
+    /* SPOKE CALCULATOR BUTTON */
+    .spoke-calculator-btn {
+      position: absolute;
+      left: 34px;
+      bottom: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      height: 54px;
+      padding: 0 22px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #ffb14a 0%, #f28a1a 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+      transition: 0.25s ease;
+    }
+
+    .spoke-calculator-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0, 0, 0, 0.42);
     }
 
     footer {
@@ -382,17 +415,17 @@
 
     @media (max-width: 1700px) {
       header {
-        grid-template-columns: 520px 1fr 420px;
+        grid-template-columns: 540px 1fr 460px;
       }
 
       .site-logo {
-        width: 500px;
+        width: 520px;
       }
 
       .site-logo img {
         width: 520px;
-        max-height: 140px;
-        margin-left: -30px;
+        max-height: 150px;
+        margin-left: -16px;
       }
 
       nav {
@@ -426,6 +459,12 @@
         max-width: 142%;
         max-height: 820px;
       }
+
+      .spoke-calculator-btn {
+        font-size: 20px;
+        min-width: 160px;
+        height: 50px;
+      }
     }
 
     @media (max-width: 1250px) {
@@ -436,14 +475,14 @@
       }
 
       .site-logo {
-        width: 420px;
+        width: 430px;
         justify-content: center;
       }
 
       .site-logo img {
         width: 430px;
-        max-height: 120px;
-        margin-left: -24px;
+        max-height: 130px;
+        margin-left: -14px;
       }
 
       nav {
@@ -478,6 +517,11 @@
       .common-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      .spoke-calculator-btn {
+        left: 26px;
+        bottom: 20px;
+      }
     }
 
     @media (max-width: 760px) {
@@ -486,13 +530,13 @@
       }
 
       .site-logo {
-        width: 320px;
+        width: 300px;
       }
 
       .site-logo img {
-        width: 320px;
-        max-height: 100px;
-        margin-left: -18px;
+        width: 300px;
+        max-height: 110px;
+        margin-left: -12px;
       }
 
       nav {
@@ -544,6 +588,15 @@
       .main-mascot-image {
         width: 110%;
         max-width: 110%;
+      }
+
+      .spoke-calculator-btn {
+        left: 18px;
+        bottom: 16px;
+        min-width: 145px;
+        height: 44px;
+        font-size: 17px;
+        padding: 0 16px;
       }
     }
   </style>
@@ -704,6 +757,9 @@
 
         <div class="performance-card-wrap">
           <img class="performance-card-image" src="performance-card02.png" alt="Newson Sportec performance banner" />
+          <a class="spoke-calculator-btn" href="https://newsonsportec.github.io/spoke-calculator/" target="_blank">
+            Spoke Calculator
+          </a>
         </div>
       </section>
 
