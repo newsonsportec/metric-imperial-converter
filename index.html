@@ -27,7 +27,7 @@
 
     header {
       width: 100%;
-      min-height: 210px;
+      min-height: 180px;
       padding: 18px 44px;
       display: grid;
       grid-template-columns: 360px 1fr 620px;
@@ -74,21 +74,11 @@
       text-underline-offset: 7px;
     }
 
-    /* SOCIAL MEDIA */
+    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .social-title {
-      font-size: 22px;
-      font-weight: 900;
-      color: #9cff00;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      align-items: center;
+      justify-content: flex-end;
     }
 
     .social-icons {
@@ -152,7 +142,7 @@
 
     .right-panel {
       padding: 18px;
-      min-height: 840px;
+      min-height: 980px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -343,33 +333,35 @@
       font-size: 13px;
     }
 
-    /* RIGHT IMAGE AREA */
+    /* MASCOT IMAGE X1.5 */
     .mascot-image-area {
+      flex: 1;
       width: 100%;
-      margin-bottom: 12px;
-      padding: 0;
-      background: #050505;
-      border-radius: 18px;
-      overflow: hidden;
+      min-height: 820px;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 0 0 16px;
+      background: #050505;
+      border-radius: 18px;
+      overflow: hidden;
     }
 
     .main-mascot-image {
-      display: block;
-      width: 100%;
+      width: 150%;
+      max-width: 150%;
       height: auto;
-      max-height: 650px;
+      max-height: 920px;
       object-fit: contain;
       object-position: center;
+      display: block;
       border-radius: 18px;
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
     .performance-card-wrap {
       width: 100%;
-      margin-top: 0;
+      margin-top: 8px;
     }
 
     .performance-card-image {
@@ -413,6 +405,20 @@
         width: 40px;
         height: 40px;
       }
+
+      .right-panel {
+        min-height: 900px;
+      }
+
+      .mascot-image-area {
+        min-height: 740px;
+      }
+
+      .main-mascot-image {
+        width: 142%;
+        max-width: 142%;
+        max-height: 820px;
+      }
     }
 
     @media (max-width: 1250px) {
@@ -431,7 +437,7 @@
       }
 
       .social-box {
-        align-items: center;
+        justify-content: center;
       }
 
       .social-icons {
@@ -444,6 +450,15 @@
 
       .right-panel {
         min-height: auto;
+      }
+
+      .mascot-image-area {
+        min-height: 680px;
+      }
+
+      .main-mascot-image {
+        width: 120%;
+        max-width: 120%;
       }
 
       .common-grid {
@@ -466,10 +481,6 @@
       }
 
       nav a {
-        font-size: 18px;
-      }
-
-      .social-title {
         font-size: 18px;
       }
 
@@ -505,6 +516,15 @@
       .common-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .mascot-image-area {
+        min-height: 420px;
+      }
+
+      .main-mascot-image {
+        width: 110%;
+        max-width: 110%;
+      }
     }
   </style>
 </head>
@@ -526,8 +546,6 @@
       </nav>
 
       <div class="social-box">
-        <div class="social-title">Social Media</div>
-
         <div class="social-icons">
           <a class="social-icon" href="https://www.facebook.com/Newsonsportecnews/?fref=ts" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24" aria-hidden="true">
