@@ -31,7 +31,7 @@
       min-height: 150px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 520px 1fr;
+      grid-template-columns: 520px 1fr 520px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -53,24 +53,31 @@
 
     nav {
       display: flex;
-      justify-content: flex-end;
-      gap: 34px;
+      justify-content: center;
       align-items: center;
+      gap: 42px;
       flex-wrap: wrap;
     }
 
     nav a {
       color: #ffffff;
       text-decoration: none;
-      font-size: 17px;
-      font-weight: 700;
+      font-size: 22px;
+      font-weight: 800;
+      transition: 0.25s;
+      white-space: nowrap;
     }
 
     nav a:hover,
     nav a.active {
       color: #9cff00;
       text-decoration: underline;
-      text-underline-offset: 6px;
+      text-underline-offset: 7px;
+    }
+
+    .header-space {
+      width: 100%;
+      height: 1px;
     }
 
     /* MAIN */
@@ -342,7 +349,12 @@
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
+    /* BOTTOM RIGHT CARD */
     .cta-card {
+      display: grid;
+      grid-template-columns: 150px 1fr auto;
+      align-items: center;
+      gap: 20px;
       background: rgba(10, 10, 10, 0.9);
       border: 1px solid #ff9800;
       border-radius: 16px;
@@ -350,17 +362,17 @@
       margin-top: 8px;
     }
 
-    .cta-card h2 {
-      color: #ff9800;
-      font-size: 26px;
-      margin-bottom: 8px;
+    .cta-logo {
+      width: 135px;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
 
-    .cta-card p {
+    .cta-text p {
       color: #ececec;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1.5;
-      margin-bottom: 14px;
     }
 
     .cta-card button {
@@ -368,10 +380,15 @@
       color: #ffffff;
       border: none;
       border-radius: 9px;
-      padding: 11px 24px;
-      font-size: 15px;
+      padding: 13px 28px;
+      font-size: 16px;
       font-weight: 700;
       cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .cta-card button:hover {
+      opacity: 0.9;
     }
 
     footer {
@@ -382,6 +399,24 @@
     }
 
     /* RESPONSIVE */
+    @media (max-width: 1500px) {
+      header {
+        grid-template-columns: 420px 1fr 120px;
+      }
+
+      .site-logo img {
+        width: 400px;
+      }
+
+      nav a {
+        font-size: 20px;
+      }
+
+      nav {
+        gap: 28px;
+      }
+    }
+
     @media (max-width: 1250px) {
       header {
         grid-template-columns: 1fr;
@@ -394,6 +429,10 @@
 
       nav {
         justify-content: center;
+      }
+
+      .header-space {
+        display: none;
       }
 
       .hero {
@@ -411,6 +450,15 @@
       .common-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      .cta-card {
+        grid-template-columns: 130px 1fr;
+      }
+
+      .cta-card button {
+        grid-column: 1 / -1;
+        width: fit-content;
+      }
     }
 
     @media (max-width: 760px) {
@@ -425,6 +473,10 @@
       nav {
         flex-wrap: wrap;
         gap: 18px;
+      }
+
+      nav a {
+        font-size: 18px;
       }
 
       .hero {
@@ -455,6 +507,19 @@
       .mascot-image-area {
         min-height: 380px;
       }
+
+      .cta-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .cta-logo {
+        margin: auto;
+      }
+
+      .cta-card button {
+        margin: auto;
+      }
     }
   </style>
 </head>
@@ -474,6 +539,8 @@
         <a href="https://newsonsportec.wixsite.com/wheelparts?fbclid=IwAR2V_09UIeMuJdEZzlEtQNpg8nXyWFddvWZ37Ag6v_jQ6RMIbA2Ug-QLIM8" target="_blank">About Us</a>
         <a href="https://newsonsportec.wixsite.com/wheelparts/contactus" target="_blank">Contact</a>
       </nav>
+
+      <div class="header-space"></div>
     </header>
 
     <main class="hero">
@@ -609,8 +676,13 @@
         </div>
 
         <div class="cta-card">
-          <h2>RIDE. BUILD. PERFORM.</h2>
-          <p>High-performance parts for every ride. Built for power. Built for you.</p>
+          <img class="cta-logo" src="logo.png" alt="Newson Sportec Logo" />
+
+          <div class="cta-text">
+            <p>High-performance parts for every ride.</p>
+            <p>Built for power. Built for you.</p>
+          </div>
+
           <button>Explore Parts</button>
         </div>
       </section>
