@@ -27,19 +27,27 @@
 
     header {
       width: 100%;
-      min-height: 180px;
+      min-height: 220px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 360px 1fr 620px;
+      grid-template-columns: 720px 1fr 620px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background: #020202;
     }
 
+    /* BIGGER LOGO + HIDE LEFT WHITE LINE */
     .site-logo {
-      width: 320px;
-      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .logo-crop {
+      width: 660px;
+      height: 165px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -47,14 +55,12 @@
     }
 
     .site-logo img {
-      width: 340px;
-      max-height: 120px;
+      width: 700px;
+      max-width: none;
+      height: auto;
       object-fit: contain;
       display: block;
-
-      /* This removes the white line on the left side of the logo image */
-      clip-path: inset(0 0 0 32px);
-      transform: translateX(-32px);
+      transform: translateX(-28px);
     }
 
     nav {
@@ -81,6 +87,7 @@
       text-underline-offset: 7px;
     }
 
+    /* SOCIAL ICONS ONLY */
     .social-box {
       display: flex;
       align-items: center;
@@ -384,17 +391,19 @@
       font-size: 14px;
     }
 
-    @media (max-width: 1700px) {
+    @media (max-width: 1800px) {
       header {
-        grid-template-columns: 320px 1fr 500px;
+        grid-template-columns: 620px 1fr 500px;
       }
 
-      .site-logo {
-        width: 280px;
+      .logo-crop {
+        width: 560px;
+        height: 150px;
       }
 
       .site-logo img {
-        width: 300px;
+        width: 610px;
+        transform: translateX(-24px);
       }
 
       nav {
@@ -438,11 +447,17 @@
       }
 
       .site-logo {
-        width: 320px;
+        justify-content: center;
+      }
+
+      .logo-crop {
+        width: 520px;
+        height: 140px;
       }
 
       .site-logo img {
-        width: 340px;
+        width: 560px;
+        transform: translateX(-22px);
       }
 
       nav {
@@ -484,12 +499,14 @@
         padding: 18px 20px;
       }
 
-      .site-logo {
-        width: 260px;
+      .logo-crop {
+        width: 320px;
+        height: 100px;
       }
 
       .site-logo img {
-        width: 280px;
+        width: 360px;
+        transform: translateX(-18px);
       }
 
       nav {
@@ -551,7 +568,9 @@
 
     <header>
       <div class="site-logo">
-        <img src="logo.png" alt="Newson Sportec Logo" />
+        <div class="logo-crop">
+          <img src="logo.png" alt="Newson Sportec Logo" />
+        </div>
       </div>
 
       <nav>
@@ -592,7 +611,6 @@
     </header>
 
     <main class="hero">
-
       <section class="left-panel">
         <div class="hero-title-wrap">
           <img src="hero-title.png" alt="Metric To Imperial Length Converter" class="hero-title-image" />
@@ -703,13 +721,11 @@
           <img class="performance-card-image" src="performance-card02.png" alt="Newson Sportec performance banner" />
         </div>
       </section>
-
     </main>
 
     <footer>
       © 2026 Newson Sportec. All rights reserved.
     </footer>
-
   </div>
 
   <script>
