@@ -25,7 +25,6 @@
       overflow-x: hidden;
     }
 
-    /* HEADER */
     header {
       width: 100%;
       min-height: 150px;
@@ -80,7 +79,6 @@
       height: 1px;
     }
 
-    /* MAIN */
     .hero {
       padding: 22px;
       display: grid;
@@ -110,22 +108,16 @@
       justify-content: space-between;
     }
 
-    /* LEFT TITLE */
-    h1 {
-      font-size: clamp(58px, 5.4vw, 96px);
-      line-height: 0.94;
-      font-weight: 900;
-      text-transform: uppercase;
+    .hero-title-wrap {
       margin-bottom: 24px;
-      letter-spacing: 0.5px;
     }
 
-    .white {
-      color: #f2f2f2;
-    }
-
-    .green {
-      color: #9cff00;
+    .hero-title-image {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      object-fit: contain;
     }
 
     .hero-description {
@@ -136,41 +128,19 @@
       margin-bottom: 22px;
     }
 
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+    .feature-strip-wrap {
       margin-bottom: 18px;
+      width: 100%;
     }
 
-    .feature {
-      background: rgba(16, 16, 16, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    .feature-strip-image {
+      display: block;
+      width: 100%;
+      height: auto;
       border-radius: 14px;
-      padding: 14px 16px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
+      object-fit: contain;
     }
 
-    .feature-icon {
-      color: #9cff00;
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    .feature h3 {
-      font-size: 16px;
-      margin-bottom: 2px;
-    }
-
-    .feature p {
-      color: #cccccc;
-      font-size: 14px;
-    }
-
-    /* CONVERTER */
     .converter-card {
       background: rgba(14, 14, 14, 0.98);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -284,7 +254,6 @@
       color: #ffe24a;
     }
 
-    /* COMMON CONVERSIONS */
     .common-card {
       background: rgba(14, 14, 14, 0.98);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -324,7 +293,6 @@
       font-size: 13px;
     }
 
-    /* RIGHT SIDE IMAGE */
     .mascot-image-area {
       flex: 1;
       width: 100%;
@@ -349,46 +317,19 @@
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
-    /* BOTTOM RIGHT CARD */
-    .cta-card {
-      display: grid;
-      grid-template-columns: 150px 1fr auto;
-      align-items: center;
-      gap: 20px;
-      background: rgba(10, 10, 10, 0.9);
-      border: 1px solid #ff9800;
-      border-radius: 16px;
-      padding: 20px 22px;
+    .performance-card-wrap {
+      width: 100%;
       margin-top: 8px;
+      border-radius: 16px;
+      overflow: hidden;
     }
 
-    .cta-logo {
-      width: 135px;
-      height: auto;
-      object-fit: contain;
+    .performance-card-image {
       display: block;
-    }
-
-    .cta-text p {
-      color: #ececec;
-      font-size: 17px;
-      line-height: 1.5;
-    }
-
-    .cta-card button {
-      background: #ff9800;
-      color: #ffffff;
-      border: none;
-      border-radius: 9px;
-      padding: 13px 28px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    .cta-card button:hover {
-      opacity: 0.9;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: contain;
     }
 
     footer {
@@ -398,7 +339,6 @@
       font-size: 14px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1500px) {
       header {
         grid-template-columns: 420px 1fr 120px;
@@ -450,15 +390,6 @@
       .common-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
-      .cta-card {
-        grid-template-columns: 130px 1fr;
-      }
-
-      .cta-card button {
-        grid-column: 1 / -1;
-        width: fit-content;
-      }
     }
 
     @media (max-width: 760px) {
@@ -483,12 +414,10 @@
         padding: 16px;
       }
 
-      h1 {
-        font-size: 44px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
+      .hero-title-image,
+      .feature-strip-image,
+      .performance-card-image {
+        max-width: 100%;
       }
 
       .converter-row {
@@ -506,19 +435,6 @@
 
       .mascot-image-area {
         min-height: 380px;
-      }
-
-      .cta-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .cta-logo {
-        margin: auto;
-      }
-
-      .cta-card button {
-        margin: auto;
       }
     }
   </style>
@@ -546,41 +462,17 @@
     <main class="hero">
 
       <section class="left-panel">
-        <h1>
-          <span class="white">Metric To</span><br />
-          <span class="green">Imperial</span><br />
-          <span class="white">Length Converter</span>
-        </h1>
+        <div class="hero-title-wrap">
+          <img src="hero-title.png" alt="Metric To Imperial Length Converter" class="hero-title-image" />
+        </div>
 
         <p class="hero-description">
           Convert centimeters, meters, and kilometers to inches, feet, and yards instantly.
           Fast, accurate, and easy to use.
         </p>
 
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon">⚡</div>
-            <div>
-              <h3>FAST</h3>
-              <p>Instant Results</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">◎</div>
-            <div>
-              <h3>ACCURATE</h3>
-              <p>Precision Conversion</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🛡</div>
-            <div>
-              <h3>RELIABLE</h3>
-              <p>Trusted Calculator</p>
-            </div>
-          </div>
+        <div class="feature-strip-wrap">
+          <img src="features-strip.png" alt="Fast Accurate Reliable Features" class="feature-strip-image" />
         </div>
 
         <section class="converter-card" id="converter">
@@ -675,15 +567,8 @@
           <img class="main-mascot-image" src="mascot.png" alt="Newson Sportec mascot and motorcycle parts" />
         </div>
 
-        <div class="cta-card">
-          <img class="cta-logo" src="logo.png" alt="Newson Sportec Logo" />
-
-          <div class="cta-text">
-            <p>High-performance parts for every ride.</p>
-            <p>Built for power. Built for you.</p>
-          </div>
-
-          <button>Explore Parts</button>
+        <div class="performance-card-wrap">
+          <img class="performance-card-image" src="performance-card.png" alt="Newson Sportec performance banner" />
         </div>
       </section>
 
