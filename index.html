@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Newson Sportec | Metric to Imperial Length Converter</title>
 
   <style>
@@ -25,13 +24,13 @@
       overflow-x: hidden;
     }
 
-    /* TOP HEADER */
+    /* HEADER */
     header {
       width: 100%;
-      min-height: 145px;
+      min-height: 150px;
       padding: 18px 44px;
       display: grid;
-      grid-template-columns: 460px 1fr 210px;
+      grid-template-columns: 520px 1fr 220px;
       align-items: center;
       gap: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -45,8 +44,8 @@
     }
 
     .site-logo img {
-      width: 430px;
-      max-height: 125px;
+      width: 470px;   /* bigger logo */
+      max-height: 130px;
       object-fit: contain;
       display: block;
     }
@@ -87,7 +86,7 @@
       border-color: #9cff00;
     }
 
-    /* MAIN LAYOUT */
+    /* MAIN */
     .hero {
       padding: 22px;
       display: grid;
@@ -110,7 +109,7 @@
     }
 
     .right-panel {
-      padding: 24px;
+      padding: 18px;
       min-height: 840px;
       display: flex;
       flex-direction: column;
@@ -143,7 +142,7 @@
       margin-bottom: 22px;
     }
 
-    /* FEATURE BOXES */
+    /* FEATURES */
     .features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -331,45 +330,21 @@
       font-size: 13px;
     }
 
-    /* RIGHT SIDE */
-    .right-text {
-      margin-bottom: 14px;
-    }
-
-    .right-text h3 {
-      font-size: 32px;
-      margin-bottom: 6px;
-      color: #ffffff;
-    }
-
-    .right-text h2 {
-      font-size: 40px;
-      line-height: 1.05;
-      color: #9cff00;
-      margin-bottom: 12px;
-    }
-
-    .line {
-      width: 88px;
-      height: 4px;
-      background: #ffffff;
-      margin-top: 12px;
-    }
-
+    /* RIGHT SIDE - NO TOP WORDS */
     .mascot-image-area {
       flex: 1;
       width: 100%;
-      min-height: 590px;
+      min-height: 680px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 8px 0 16px;
+      padding: 0 0 16px;
     }
 
     .main-mascot-image {
       width: 100%;
       height: 100%;
-      max-height: 650px;
+      max-height: 690px;
       object-fit: cover;
       object-position: center;
       display: block;
@@ -382,6 +357,7 @@
       border: 1px solid #ff9800;
       border-radius: 16px;
       padding: 20px 22px;
+      margin-top: 8px;
     }
 
     .cta-card h2 {
@@ -423,7 +399,7 @@
       }
 
       .site-logo img {
-        width: 400px;
+        width: 420px;
       }
 
       .github-btn {
@@ -439,7 +415,7 @@
       }
 
       .mascot-image-area {
-        min-height: 560px;
+        min-height: 520px;
       }
 
       .common-grid {
@@ -453,7 +429,7 @@
       }
 
       .site-logo img {
-        width: 320px;
+        width: 340px;
       }
 
       nav {
@@ -486,12 +462,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .right-text h2 {
-        font-size: 30px;
-      }
-
       .mascot-image-area {
-        min-height: 420px;
+        min-height: 380px;
       }
     }
   </style>
@@ -646,12 +618,6 @@
       </section>
 
       <section class="right-panel">
-        <div class="right-text">
-          <h3>PRECISION PARTS.</h3>
-          <h2>POWERFUL PERFORMANCE.</h2>
-          <div class="line"></div>
-        </div>
-
         <div class="mascot-image-area">
           <img class="main-mascot-image" src="mascot.png" alt="Newson Sportec mascot and motorcycle parts" />
         </div>
