@@ -131,38 +131,18 @@
       margin-bottom: 22px;
     }
 
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+    /* FEATURE IMAGE STRIP */
+    .feature-strip-wrap {
       margin-bottom: 18px;
+      width: 100%;
     }
 
-    .feature {
-      background: rgba(16, 16, 16, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    .feature-strip-image {
+      display: block;
+      width: 100%;
+      height: auto;
       border-radius: 14px;
-      padding: 14px 16px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .feature-icon {
-      color: #9cff00;
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    .feature h3 {
-      font-size: 16px;
-      margin-bottom: 2px;
-    }
-
-    .feature p {
-      color: #cccccc;
-      font-size: 14px;
+      object-fit: contain;
     }
 
     /* CONVERTER */
@@ -478,12 +458,9 @@
         padding: 16px;
       }
 
-      .hero-title-image {
+      .hero-title-image,
+      .feature-strip-image {
         max-width: 100%;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
       }
 
       .converter-row {
@@ -550,30 +527,8 @@
           Fast, accurate, and easy to use.
         </p>
 
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon">⚡</div>
-            <div>
-              <h3>FAST</h3>
-              <p>Instant Results</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">◎</div>
-            <div>
-              <h3>ACCURATE</h3>
-              <p>Precision Conversion</p>
-            </div>
-          </div>
-
-          <div class="feature">
-            <div class="feature-icon">🛡</div>
-            <div>
-              <h3>RELIABLE</h3>
-              <p>Trusted Calculator</p>
-            </div>
-          </div>
+        <div class="feature-strip-wrap">
+          <img src="features-strip.png" alt="Fast Accurate Reliable Features" class="feature-strip-image" />
         </div>
 
         <section class="converter-card" id="converter">
