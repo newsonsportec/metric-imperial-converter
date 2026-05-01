@@ -110,22 +110,17 @@
       justify-content: space-between;
     }
 
-    /* LEFT TITLE */
-    h1 {
-      font-size: clamp(58px, 5.4vw, 96px);
-      line-height: 0.94;
-      font-weight: 900;
-      text-transform: uppercase;
+    /* HERO TITLE IMAGE */
+    .hero-title-wrap {
       margin-bottom: 24px;
-      letter-spacing: 0.5px;
     }
 
-    .white {
-      color: #f2f2f2;
-    }
-
-    .green {
-      color: #9cff00;
+    .hero-title-image {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      object-fit: contain;
     }
 
     .hero-description {
@@ -483,8 +478,8 @@
         padding: 16px;
       }
 
-      h1 {
-        font-size: 44px;
+      .hero-title-image {
+        max-width: 100%;
       }
 
       .features {
@@ -546,11 +541,9 @@
     <main class="hero">
 
       <section class="left-panel">
-        <h1>
-          <span class="white">Metric To</span><br />
-          <span class="green">Imperial</span><br />
-          <span class="white">Length Converter</span>
-        </h1>
+        <div class="hero-title-wrap">
+          <img src="hero-title.png" alt="Metric To Imperial Length Converter" class="hero-title-image" />
+        </div>
 
         <p class="hero-description">
           Convert centimeters, meters, and kilometers to inches, feet, and yards instantly.
