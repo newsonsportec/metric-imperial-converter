@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Newson Sportec | Metric to Imperial Length Converter</title>
 
   <style>
@@ -24,7 +25,6 @@
       overflow-x: hidden;
     }
 
-    /* HEADER */
     header {
       width: 100%;
       min-height: 150px;
@@ -79,7 +79,6 @@
       height: 1px;
     }
 
-    /* MAIN */
     .hero {
       padding: 22px;
       display: grid;
@@ -109,7 +108,6 @@
       justify-content: space-between;
     }
 
-    /* HERO TITLE IMAGE */
     .hero-title-wrap {
       margin-bottom: 24px;
     }
@@ -130,7 +128,6 @@
       margin-bottom: 22px;
     }
 
-    /* FEATURE STRIP IMAGE */
     .feature-strip-wrap {
       margin-bottom: 18px;
       width: 100%;
@@ -144,7 +141,6 @@
       object-fit: contain;
     }
 
-    /* CONVERTER */
     .converter-card {
       background: rgba(14, 14, 14, 0.98);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -258,7 +254,6 @@
       color: #ffe24a;
     }
 
-    /* COMMON CONVERSIONS */
     .common-card {
       background: rgba(14, 14, 14, 0.98);
       border: 1px solid rgba(255, 255, 255, 0.12);
@@ -298,7 +293,6 @@
       font-size: 13px;
     }
 
-    /* RIGHT SIDE IMAGE */
     .mascot-image-area {
       flex: 1;
       width: 100%;
@@ -323,24 +317,17 @@
       filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.75));
     }
 
-    /* CTA BANNER IMAGE */
-    .cta-banner-wrap {
+    .performance-card-wrap {
+      width: 100%;
       margin-top: 8px;
-      width: 100%;
     }
 
-    .cta-banner-link {
-      display: block;
-      width: 100%;
-      text-decoration: none;
-    }
-
-    .cta-banner-image {
+    .performance-card-image {
       display: block;
       width: 100%;
       height: auto;
-      object-fit: contain;
       border-radius: 16px;
+      object-fit: contain;
     }
 
     footer {
@@ -350,7 +337,6 @@
       font-size: 14px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1500px) {
       header {
         grid-template-columns: 420px 1fr 120px;
@@ -428,7 +414,7 @@
 
       .hero-title-image,
       .feature-strip-image,
-      .cta-banner-image {
+      .performance-card-image {
         max-width: 100%;
       }
 
@@ -579,10 +565,8 @@
           <img class="main-mascot-image" src="mascot.png" alt="Newson Sportec mascot and motorcycle parts" />
         </div>
 
-        <div class="cta-banner-wrap">
-          <a class="cta-banner-link" href="https://newsonsportec.wixsite.com/wheelparts?fbclid=IwAR2V_09UIeMuJdEZzlEtQNpg8nXyWFddvWZ37Ag6v_jQ6RMIbA2Ug-QLIM8" target="_blank">
-            <img src="cta-banner.png" alt="Explore Parts Banner" class="cta-banner-image" />
-          </a>
+        <div class="performance-card-wrap">
+          <img class="performance-card-image" src="performance-card.png" alt="Newson Sportec performance banner" />
         </div>
       </section>
 
